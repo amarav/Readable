@@ -14,3 +14,12 @@ export const getCategoriesAPI = () => {
     return fetch(`${url}/categories`, getHeaders)
     .then(response => response.json())
 }
+
+export const getAllPostsAPI = (category = undefined) => {
+    if(category !== undefined) {
+        return fetch(`${url}/${category}/posts`, getHeaders)
+        .then(response => response.json())
+    }    
+    return fetch(`${url}/posts`, getHeaders)
+    .then(response => response.json())
+} 

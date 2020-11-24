@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import Header from './Header'
 import { Switch, Route } from 'react-router-dom'
 import Categories from './Categories'
+import Posts from './Posts'
 
 class Main extends Component
 {
@@ -9,6 +10,7 @@ class Main extends Component
      return (
         <React.Fragment>
         <Categories />
+        <Posts />
         </React.Fragment>
        );
   }

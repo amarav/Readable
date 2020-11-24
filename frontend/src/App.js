@@ -16,38 +16,6 @@ class App extends Component {
     };
   }
 
-  //To run inside the Workspace, please include the credentials.
-  
-  componentDidMount() {
- /*   const api = process.env.REACT_APP_BACKEND || 'http://localhost:3001';
-    const url = `${api}/categories`;
-    console.log("fetching from url", url);
-    fetch(url, {
-      headers: { Authorization: "whatever-you-want" },
-    })
-      .then(res => {
-        return res.text();
-      })
-      .then(data => {
-        this.setState({ backend: data });
-      }); */ 
-  } 
-
-  // To run outside of the Workspace, please do not include the credentials.
-
-  /* 
-  componentDidMount() {
-    const api = process.env.REACT_APP_BACKEND ||  'http://localhost:3001';
-    const url = `${api}/categories`;
-    console.log('fetching from url', url);
-    fetch(url, { headers: { 'Authorization': 'whatever-you-want' }} )
-      .then( (res) => { return(res.text()) })
-      .then((data) => {
-        this.setState({backend:data});
-      });
-  }
-  */
-
   render() {
     return (
       <div className="App">
