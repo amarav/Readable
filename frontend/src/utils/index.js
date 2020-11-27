@@ -10,6 +10,30 @@ const getHeaders = {
     }
 }
 
+const postHeaders = {
+    method: 'POST',
+    headers: {
+        "Content-Type": "application/json",
+        "Authorization": header
+    }
+}
+
+const putHeaders = {
+    method: 'PUT',
+    headers: {
+        "Content-Type": "application/json",
+        "Authorization": header
+    }
+}
+
+const deleteHeaders = {
+    method: 'DELETE',
+    headers: {
+        "Content-Type": "application/json",
+        "Authorization": header
+    }
+}
+
 export const getCategoriesAPI = () => {
     return fetch(`${url}/categories`, getHeaders)
     .then(response => response.json())
@@ -23,3 +47,26 @@ export const getAllPostsAPI = (category = undefined) => {
     return fetch(`${url}/posts`, getHeaders)
     .then(response => response.json())
 } 
+
+export const createPostAPI = (body) => {
+    postHeaders.body = JSON.stringify(body)
+    return fetch(`${url}/posts`, postHeaders)
+    .then(response => response.json())
+}
+
+export const votePostAPI = (id, option) => {
+    postHeaders.body = JSON.stringify({option})
+    return fetch(`${url}/posts/${id}`, postHeaders)
+    .then(response => response.json())
+}
+
+export const editPostAPI = (id, body) => {
+    putHeaders.body = JSON.stringify(body)
+    return fetch(`${url}/posts/${id}`, putHeaders)
+    .then(response => response.json())
+}
+
+export const deletePostAPI = (id) => {
+    return fetch(`${url}/posts/${id}`, deleteHeaders)
+    .then(response => response.json())
+}

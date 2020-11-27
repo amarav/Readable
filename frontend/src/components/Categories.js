@@ -1,7 +1,6 @@
 import React from 'react'
 import { getCategories } from '../actions'
 import {useDispatch,useSelector} from 'react-redux'
-import {    getCategoriesAPI, } from '../utils'
 import { Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
