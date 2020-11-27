@@ -70,3 +70,8 @@ export const deletePostAPI = (id) => {
     return fetch(`${url}/posts/${id}`, deleteHeaders)
     .then(response => response.json())
 }
+
+export const generateId = () => {
+    let id = (Math.random() + 1).toString(36).substring(2)
+    return id
+}

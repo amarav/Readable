@@ -5,8 +5,6 @@ import { ButtonGroup, Button, Dropdown } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import * as moment from 'moment'
 
-
-
 export const getDate = (timestamp) => {
     const date = moment(timestamp)._d.toString().split(' ')
     return date[0] + ', ' + date[2] + ' ' + date[1] + ' ' + date[3]
@@ -23,7 +21,7 @@ const Posts = (props) => {
        await setPostsArray(Posts)
     }
     fetchPosts()
-  },[postsArray,props.match.params.category])
+  },[Posts,props.match.params.category])
 
   const sortBy = (option) => {
       let sortedPosts = postsArray.slice()

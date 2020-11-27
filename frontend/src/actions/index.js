@@ -5,7 +5,8 @@ import {
     SORT_BY_VOTES,
     SORT_BY_TIME,
     DELETE_POST,
-    UPDATE_POST
+    UPDATE_POST,
+    CREATE_POST
 } from './constants'
 
 import {
@@ -13,6 +14,7 @@ import {
     getAllPostsAPI,
     votePostAPI,
     deletePostAPI,
+    createPostAPI,
 } from '../utils'
 
 
@@ -56,5 +58,12 @@ export const deletePost = (id) => {
     return dispatch => {
         deletePostAPI(id)
         .then(response => dispatch({DELETE_POST,response}))
+    }
+}
+
+export const createPost = (body) => {
+    return dispatch => {
+        createPostAPI(body)
+        .then(response => dispatch({type: CREATE_POST, response}))
     }
 }
