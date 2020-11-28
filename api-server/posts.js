@@ -79,7 +79,7 @@ function add (token, post) {
       deleted: false,
       commentCount: 0
     }
-
+    db[token]=posts
     res(posts[post.id])
   })
 }

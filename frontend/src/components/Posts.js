@@ -21,7 +21,7 @@ const Posts = (props) => {
        await setPostsArray(Posts)
     }
     fetchPosts()
-  },[Posts,props.match.params.category])
+  },[props.match.params.category])
 
   const sortBy = (option) => {
       let sortedPosts = postsArray.slice()
