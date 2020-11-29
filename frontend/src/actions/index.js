@@ -57,7 +57,7 @@ export const votePost = (id,option) => {
 export const deletePost = (id) => {
     return dispatch => {
         deletePostAPI(id)
-        .then(response => dispatch({DELETE_POST,response}))
+        .then(response => dispatch({type:DELETE_POST,response}))
     }
 }
 

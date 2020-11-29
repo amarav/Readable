@@ -6,7 +6,7 @@ const getHeaders = {
     method: 'GET',
     headers: {
         "Content-Type": "application/json",
-        "Authorization": Math.random().toString(36).substr(-8)
+        "Authorization": header
     }
 }
 
