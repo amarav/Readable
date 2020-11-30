@@ -14,7 +14,8 @@ import {
     getAllPostsAPI,
     votePostAPI,
     deletePostAPI,
-    createPostAPI,
+    createPostAPI,    
+    editPostAPI,
 } from '../utils'
 
 
@@ -65,5 +66,12 @@ export const createPost = (body) => {
     return dispatch => {
         createPostAPI(body)
         .then(response => dispatch({type: CREATE_POST, response}))
+    }
+}
+
+export const editPost = (id, body) => {
+    return dispatch => {
+        editPostAPI(id, body)
+        .then(response => dispatch({type: UPDATE_POST, response}))
     }
 }
