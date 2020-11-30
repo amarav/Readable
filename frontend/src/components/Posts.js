@@ -83,9 +83,9 @@ const Posts = (props) => {
                              style={{backgroundColor: '#78bcc4', border: 'none'}}>
                                 <i className="fa fa-edit"></i>
                             </Button>
-                            <Button onClick={() => delete_post(props, post.id)} style={{backgroundColor: '#f7444e', border: 'none'}}>
+                            <Button onClick={() => delete_post(post.id)} style={{backgroundColor: '#f7444e', border: 'none'}}>
                                 <i className="fa fa-trash"></i>
-                            </Button>
+                            </Button>                            
                         </ButtonGroup> 
                     </div>
                 </div>

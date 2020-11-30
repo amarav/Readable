@@ -75,3 +75,36 @@ export const generateId = () => {
     let id = (Math.random() + 1).toString(36).substring(2)
     return id
 }
+
+export const getCommentsAPI = (id) => {
+    return fetch(`${url}/posts/${id}/comments`, getHeaders)
+    .then(response => response.json())
+}
+
+export const addCommentAPI = (body) => {
+    postHeaders.body = JSON.stringify(body)
+    return fetch(`${url}/comments`, postHeaders)
+    .then(response => response.json())
+}
+
+export const getCommentAPI = (id) => {
+    return fetch(`${url}/comments/${id}`, getHeaders)
+    .then(response => response.json())
+}
+
+export const voteCommentAPI = (id, option) => {
+    postHeaders.body = JSON.stringify({option})
+    return fetch(`${url}/comments/${id}`, postHeaders)
+    .then(response => response.json())
+}
+
+export const updateCommentAPI = (id, body) => {
+    putHeaders.body = JSON.stringify(body)
+    return fetch(`${url}/comments/${id}`, putHeaders)
+    .then(response => response.json())
+}
+
+export const deleteCommentAPI = (id) => {
+    return fetch(`${url}/comments/${id}`, deleteHeaders)
+    .then(response => response.json())
+}
