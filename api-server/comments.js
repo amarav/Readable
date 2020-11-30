@@ -68,7 +68,7 @@ function add (token, comment) {
       deleted: false,
       parentDeleted: false
     }
-
+    db[token] = comments
     posts.incrementCommentCounter(token, comment.parentId, 1)
     res(comments[comment.id])
   })
