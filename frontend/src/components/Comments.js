@@ -8,7 +8,7 @@ export default function Comments ({commentBox, comment, vote_comment, setComment
             justifyContent: 'space-between',
             boxShadow: '0px 1px 3px 0 rgba(0,0,0,0.07)',
             padding: 10,
-            backgroundColor: '#f7f8f3',
+            backgroundColor: '#e6e2d8',
             marginBottom: 15,
             borderRadius: 6
         }}>
@@ -22,10 +22,10 @@ export default function Comments ({commentBox, comment, vote_comment, setComment
                 </Form>}
                 <p><small>by <strong>{comment.author}</strong> on {getDate(comment.timestamp)}</small></p>
                 <ButtonGroup>
-                    <Button onClick={() => vote_comment(comment.id,'upVote')} style={{backgroundColor: '#78bcc4', border: 'none'}}>
+                    <Button className="w3-button w3-theme-d1 w3-margin-bottom" onClick={() => vote_comment(comment.id,'upVote')} style={{backgroundColor: '#78bcc4', border: 'none'}}>
                         <i className="fa fa-thumbs-up"></i>
                     </Button>
-                    <Button onClick={() => vote_comment(comment.id,'downVote')} style={{backgroundColor: '#f7444e', border: 'none'}}>
+                    <Button className="w3-button w3-theme-d1 w3-margin-bottom"  onClick={() => vote_comment(comment.id,'downVote')} style={{backgroundColor: '#f7444e', border: 'none'}}>
                         <i className="fa fa-thumbs-down"></i>
                     </Button>
                 </ButtonGroup> 
@@ -33,11 +33,11 @@ export default function Comments ({commentBox, comment, vote_comment, setComment
             </div>
             <div>
                 <ButtonGroup>
-                    <Button onClick={() => setCommentBox(true)} style={{backgroundColor: '#78bcc4', border: 'none'}}>
+                    <Button className="w3-button w3-theme-d1 w3-margin-bottom" onClick={() => setCommentBox(true)} style={{backgroundColor: '#78bcc4', border: 'none'}}>
                         <i className="fa fa-edit"></i>
                     </Button>
-                    <Button onClick={() => delete_comment(comment.id)} style={{backgroundColor: '#f7444e', border: 'none'}}>
-                        <i className="fa fa-trash-alt"></i>
+                    <Button  className="w3-button w3-margin-bottom" onClick={() => delete_comment(comment.id)} style={{backgroundColor: '#f7444e', border: 'none'}}>
+                        <i className="fa fa-trash"></i>
                     </Button>
                 </ButtonGroup> 
             </div>

@@ -7,27 +7,30 @@ import { Link } from 'react-router-dom'
 const Categories = () => 
 {
    const dispatch = useDispatch()
-   const categories = useSelector(state => state.categories)
-   
+   const categories = useSelector(state => state.categories)  
   
-    React.useEffect(() => {
+   React.useEffect(() => {
       dispatch(getCategories())             
     }, [])
-  console.log(categories)
-  return(
-  <div> Categories:&nbsp; &nbsp;
-    <div style={{display: 'inline-flex'}}>                
-        <Button style={{marginRight: 10, backgroundColor: '#78bcc4', border: 'none'}}>
-            <Link style={{color:'#f7f8f3'}} to='/'>All</Link>
-        </Button> &nbsp; 
-        {categories && categories.map((category, index) => (                
-        <Button style={{marginRight: 10, backgroundColor: '#78bcc4', border: 'none'}} key={index}>
-            <Link style={{color:'#f7f8f3'}} to={`/${category.path}`}>{category.name}</Link>
-        </Button>
-        
-    ))}
-    </div>
-</div>
+    
+  return(   
+  <div className="w3-row-padding w3-container w3-round w3-margin">
+  <br/>
+   <div className="w3-col m4">Categories:&nbsp; &nbsp;
+     <div>
+        <div>
+          <Button>
+            <Link className="w3-button w3-block w3-theme-l1 w3-left-align"  to='/'>All</Link>
+          </Button> &nbsp; 
+          {categories && categories.map((category, index) => (                
+              <Button key={index}>
+                 <Link className="w3-button w3-block w3-theme-l1 w3-left-align" to={`/${category.path}`}>{category.name}</Link>
+              </Button>        
+          ))}
+       </div>
+    </div>     
+   </div>  
+ </div>
   );
 }
 
