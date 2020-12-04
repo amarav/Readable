@@ -13,15 +13,11 @@ export default function Comments ({commentBox, comment, vote_comment, setComment
             borderRadius: 6
         }}>
             <div>
-                {!commentBox ? <h6>{comment.body}</h6> : 
-                <Form style={{display: 'inline-flex'}} onSubmit={(e) => edit_comment(comment.id, e)}>
-                    <Form.Control name="edit" type="text" defaultValue={comment.body} /> &nbsp;
-                    <Button style={{backgroundColor: '#f7444e', border: 'none'}} type="submit">
-                        Comment
-                    </Button>
-                </Form>}
-                <p><small>by <strong>{comment.author}</strong> on {getDate(comment.timestamp)}</small></p>
-                <ButtonGroup>
+                {!commentBox ? 
+                    <div>
+                    <h6>{comment.body}</h6> <br/>
+            <ButtonGroup>
+                &nbsp;&nbsp;{comment.voteScore} Votes&nbsp;&nbsp;
                     <Button className="w3-button w3-theme-d1 w3-margin-bottom" onClick={() => vote_comment(comment.id,'upVote')} style={{backgroundColor: '#78bcc4', border: 'none'}}>
                         <i className="fa fa-thumbs-up"></i>
                     </Button>
@@ -29,8 +25,16 @@ export default function Comments ({commentBox, comment, vote_comment, setComment
                         <i className="fa fa-thumbs-down"></i>
                     </Button>
                 </ButtonGroup> 
-                &nbsp;&nbsp;{comment.voteScore}
             </div>
+                 
+              :  <Form style={{display: 'inline-flex'}} onSubmit={(e) => edit_comment(comment.id, e)}>
+                    <Form.Control name="edit" type="text" defaultValue={comment.body} /> &nbsp;
+                    <Button style={{backgroundColor: '#f7444e', border: 'none'}} type="submit">
+                        Comment
+                    </Button>
+                </Form>}                                
+            </div>
+           
             <div>
                 <ButtonGroup>
                     <Button className="w3-button w3-theme-d1 w3-margin-bottom" onClick={() => setCommentBox(true)} style={{backgroundColor: '#78bcc4', border: 'none'}}>
@@ -40,6 +44,7 @@ export default function Comments ({commentBox, comment, vote_comment, setComment
                         <i className="fa fa-trash"></i>
                     </Button>
                 </ButtonGroup> 
+                <p><small>by <strong>{comment.author}</strong> on {getDate(comment.timestamp)}</small></p>
             </div>
         </div>
     )

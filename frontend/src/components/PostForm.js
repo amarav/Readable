@@ -34,11 +34,11 @@ const PostForm = (props) => {
                     <Form.Control name="author" type="text" required/>
                 </Form.Group>
                 <Form.Group>
-                    <Form.Label>Title of your post</Form.Label>
+                    <Form.Label style={{paddingRight:60}}>Title</Form.Label>
                     <Form.Control name="title" type="text" required/>
                 </Form.Group>
                 <Form.Group>
-                    <Form.Label>Category of your post</Form.Label>
+                    <Form.Label style={{paddingLeft:20,paddingRight:140}}>Category</Form.Label>
                     <Form.Control name="category" as="select" rows="3" required>
                         {
                             categories && categories.map((category, index) => (
@@ -48,10 +48,10 @@ const PostForm = (props) => {
                     </Form.Control>
                 </Form.Group>
                 <Form.Group>
-                    <Form.Label>Your message</Form.Label>
-                    <Form.Control name="body" as="textarea" rows="3" required/>
+                    <Form.Label style={{paddingRight:35}}>Message</Form.Label>
+                    <Form.Control name="body" as="textarea" rows="4" columns="6" required/>
                 </Form.Group>
-                <Button style={{backgroundColor: '#f7444e', border: 'none'}} type="submit">
+                <Button style={{backgroundColor: '#b0b0ae', border: 'none'}} type="submit">
                     Add this post
                 </Button>
             </Form>
