@@ -42,10 +42,11 @@ const Posts = (props) => {
     <div className="w3-container w3-card w3-white w3-round w3-margin">
       <Dropdown>
         <Dropdown.Toggle style={{ backgroundColor: '#78bcc4', border: 'none' }}>
+        SORT BY
         </Dropdown.Toggle>
         <Dropdown.Menu>
-          <Dropdown.Item onClick={() => sortBy('votes')}>Votes</Dropdown.Item>
-          <Dropdown.Item onClick={() => sortBy('time')}>Time</Dropdown.Item>
+          <Dropdown.Item onClick={() => sortBy('votes')}>Votes&nbsp;&nbsp;</Dropdown.Item>
+          <Dropdown.Item onClick={() => sortBy('time')}>&nbsp;&nbsp;Time</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown> <br />
 
