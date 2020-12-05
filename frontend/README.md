@@ -48,7 +48,7 @@ List pages include a button to add a new post.
 
 All available categories are visible in any list view.
 
-<img src="https://github.com/amarav/Readable/blob/master/images/home.png" alt="home.png" width="300" height="400"/>
+![Home](https://github.com/amarav/Readable/blob/master/images/home.gif)
 
 # READ POST
 
@@ -63,26 +63,26 @@ Post is displayed with the following:
 6) Voting mechanism to upvote or downvote the post
 7) Buttons or links for editing or deleting that post
 
-<img src="https://github.com/amarav/Readable/blob/master/images/readPost.png" alt="readPost.png" width="300" height="400"/>
+
+![ReadPost](https://github.com/amarav/Readable/blob/master/images/readPost.gif)
 
 # LIKE POST
 
 The voting mechanism works and correctly displays the new vote score after clicking for both the post and comments.
 
-<img src="https://github.com/amarav/Readable/blob/master/images/likePost.png" alt="likePost.png" width="300" height="400"/>
+![LikePost](https://github.com/amarav/Readable/blob/master/images/likePost.gif)
 
 # EDIT POST 
 
 Edit buttons for posts/comments open a form with existing data pre-populated. Submitting the form correctly updates the data for the comment/post.
 
-<img src="https://github.com/amarav/Readable/blob/master/images/editPost.png" alt="editPost.png" width="300" height="400"/>
+![editPost](https://github.com/amarav/Readable/blob/master/images/editPost.gif)
 
 # NEW POST
 
 Application has a form for creating a new post. Submitting the form properly adds the post to the correct category.
 
-
-<img src="https://github.com/amarav/Readable/blob/master/images/editPost.png" alt="newPost.png" width="300" height="400"/>
+![newPost](https://github.com/amarav/Readable/blob/master/images/newPost.gif)
 
 # COMMENTS
 
@@ -92,7 +92,7 @@ Listed comments are displayed with the following:
 3) Voting mechanism to upvote or downvote the comment
 4) Buttons or links for editing or deleting that comment
 
-<img src="https://github.com/amarav/Readable/blob/master/images/comments.png" alt="comments.png" width="300" height="400"/>
+![comments](https://github.com/amarav/Readable/blob/master/images/comments.gif)
 
 # ADD COMMENT
 
